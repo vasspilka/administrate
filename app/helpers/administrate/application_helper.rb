@@ -19,6 +19,16 @@ module Administrate
         )
     end
 
+    def sort_order(order)
+      if order == "asc"
+        "ascending"
+      elsif order == "desc"
+        "descending"
+      else
+        "none"
+      end
+    end
+
     def svg_tag(asset, svg_id, options = {})
       svg_attributes = {
         "xlink:href".freeze => "#{asset_url(asset)}##{svg_id}",
